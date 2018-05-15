@@ -213,9 +213,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)/releasetools
 #include device/qcom/sepolicy/sepolicy.mk
 #BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
-# Sensor
-USE_SENSOR_MULTI_HAL := true
-
 # Shim
 TARGET_LD_SHIM_LIBS := \
     /vendor/bin/adspd|libshim_adsp.so \
