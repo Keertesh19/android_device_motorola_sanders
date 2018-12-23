@@ -69,6 +69,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     camera.mot.startup_probing=0 \
     persist.camera.debug.logfile=0 \
     persist.camera.gyro.disable=0 \
+    persist.camera.eis.enable=1 \
     persist.camera.HAL3.enabled=1 \
     persist.camera.expose.aux=1 \
     vidc.enc.dcvs.extra-buff-count=2 \
@@ -194,8 +195,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.at_library=libqti-at.so \
-    ro.vendor.gt_library=libqti-gt.so \
-    vendor.debug.enable.gamed=0
+    ro.vendor.gt_library=libqti-gt.so
 
 # Qualcomm
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -287,3 +287,32 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.bpt_adb=0x2ee6 \
     ro.usb.bpteth=0x2ee7 \
     ro.usb.bpteth_adb=0x2ee8
+
+# Volte
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.vendor.radio.force_on_dc=true \
+persist.radio.custom_ecc=1 \
+persist.radio.data_con_rprt=1 \
+persist.vendor.radio.data_ltd_sys_ind=1 \
+persist.radio.data_ltd_sys_ind=1 \
+persist.vendor.radio.ignore_dom_time=10 \
+persist.radio.ignore_dom_time=10 \
+persist.radio.rat_on=combine \
+persist.radio.is_wps_enabled=true \
+persist.radio.videopause.mode=1 \
+persist.radio.sap_silent_pin=1 \
+persist.radio.always_send_plmn=true \
+persist.rcs.supported=1 \
+persist.dbg.ims_volte_enable=1 \
+persist.dbg.volte_avail_ovr=1 \
+persist.dbg.vt_avail_ovr=1 \
+persist.dbg.wfc_avail_ovr=1 \
+persist.radio.data_lte_sys_ind=1
+
+# FOSS CONFIGS
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.qcom.dpps.sensortype=3 \
+    ro.qualcomm.display.paneltype=1 \
+    ro.qualcomm.foss=1 \
+    config.foss.xml=1 \
+    config.foss.path=/vendor/etc/FOSSConfig.xml
