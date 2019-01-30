@@ -18,8 +18,9 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/motorola/sanders/full_sanders.mk)
 
-# Inherit some common AospExtended stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+# Inherit some common PixelExperience stuff.
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+TARGET_GAPPS_ARCH := arm64
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1080
